@@ -34,6 +34,10 @@
         font: 500 1.1rem 'arial';
     }
     
+    .form--hidden {
+        display: none
+    }
+    
     .form>*:first-child {
         margin-top: 0;
     }
@@ -126,4 +130,63 @@
     
     .form__link:hover {
         text-decoration: underline;
+    }
+    /* mouser */
+    
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+    
+    body {
+        height: 100vh;
+        cursor: none;
+    }
+    
+    .main {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .cursor {
+        z-index: 999;
+        position: fixed;
+        background: #2696E8;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        pointer-events: none;
+        animation: colors 5s infinite;
+        transform: translate(-50%, -50%);
+        display: none;
+    }
+    
+    @keyframes colors {
+        0% {
+            filter: hue-rotate(0deg);
+        }
+        100% {
+            filter: hue-rotate(360deg);
+        }
+    }
+    
+    .cursor:before {
+        content: '';
+        position: absolute;
+        background: #2696E8;
+        width: 40px;
+        height: 40px;
+        opacity: 0.1;
+        transform: translate(-30%, -30%);
+        border-radius: 50%;
+    }
+    
+    .cursor:hover {
+        width: 200px;
+        height: 200px;
     }
