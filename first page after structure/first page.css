@@ -1,6 +1,4 @@
-    @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
+
     .px-4 {
         padding-left: 1rem;
         padding-right: 1rem
@@ -12,42 +10,56 @@
     }
     
     body {
-        background-image: url("https://static-cse.canva.com/blob/572029/removingbackgroundimages_Unsplash.4c9ea595.avif");
+        background-image:linear-gradient(rgb(227, 231, 252), rgb(162, 232, 211));
     }
     
     .home-page__titlu--paragraf__buttons__twitter {
         padding: 10px;
         margin: 0.50rem;
+        height: 40px;
+        text-align:left
     }
     
     .home-page__titlu--paragraf__buttons__instagram {
         padding: 10px;
         margin: 0.50rem;
+        height: 40px;
+        text-align:left
     }
     
     .home-page__titlu--paragraf__buttons__facebook {
         padding: 10px;
         margin: 0.75rem;
+        height: 40px;
+        text-align:left
     }
     
     .home-page__titlu--paragraf__buttons__snapchat {
         padding: 10px;
         margin: 0.75rem;
+        height: 40px;
+        text-align:left
     }
     
     .home-page__titlu--paragraf__buttons__linkedin {
         padding: 10px;
         margin: 0.75rem;
+        height: 40px;
+        text-align:left
     }
     
     .home-page__titlu--paragraf__buttons__email {
         padding: 10px;
         margin: 0.75rem;
+        height: 40px;
+        text-align:left
     }
     
     .home-page__titlu--paragraf__buttons__github {
         padding: 10px;
         margin: 0.75rem;
+        height: 40px;
+        text-align:left
     }
     
     .home-page {
@@ -62,6 +74,7 @@
         width: 300px;
         font-size: 35px;
         transition: all 1s linear;
+        text-align: left;
     }
     
     .home-page__titlu--paragraf__buttons1:hover {
@@ -69,6 +82,8 @@
         color: rgb(3, 0, 0);
         background-color: rgb(244, 243, 248);
     }
+    
+   
     /* instagram  */
     
     .home-page__titlu--paragraf__buttons2 {
@@ -78,6 +93,7 @@
         width: 300px;
         font-size: 35px;
         transition: all 1s linear;
+        text-align: left;
     }
     
     .home-page__titlu--paragraf__buttons2:hover {
@@ -94,6 +110,7 @@
         width: 300px;
         font-size: 35px;
         transition: all 1s linear;
+        text-align: left;
     }
     
     .home-page__titlu--paragraf__buttons3:hover {
@@ -110,6 +127,7 @@
         width: 300px;
         font-size: 35px;
         transition: all 1s linear;
+        text-align: left;
     }
     
     .home-page__titlu--paragraf__buttons5:hover {
@@ -126,6 +144,7 @@
         width: 300px;
         font-size: 35px;
         transition: all 1s linear;
+        text-align: left;
     }
     
     .home-page__titlu--paragraf__buttons7:hover {
@@ -142,6 +161,7 @@
         width: 300px;
         font-size: 35px;
         transition: all 1s linear;
+        text-align: left;
     }
     
     .home-page__titlu--paragraf__buttons6:hover {
@@ -154,7 +174,12 @@
         font-size: 45px;
     }
     
-    .img {
-        height: 50px;
-        width: 60px;
+    img {
+        height: 400px;
+        width: 300px;
+        border-radius: 20px;
+    }
+    .copyright{
+        text-align:center;
+    
     }
