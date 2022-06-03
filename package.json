@@ -1,12 +1,5 @@
 {
-    "devDependencies": {
-        "tailwindcss": "^3.0.24"
-    },
-    "dependencies": {
-        "Tailwindcss": "npm:tailwindcss@^3.0.24"
-    },
-    "scripts": {
-        "build:css": "tailwind build src/first page.css -o dist/firstpage.css"
-    }
-
+  "devDependencies": {
+    "tailwindcss": "^3.0.24"
+  }
 }

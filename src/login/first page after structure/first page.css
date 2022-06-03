@@ -1,0 +1,345 @@
+
+    body {
+        background-image:linear-gradient(rgb(227, 231, 252), rgb(162, 232, 211));
+    }
+
+
+nav{
+    padding: 100px;
+    margin: 0 auto;
+}
+
+.home-pages{
+  background-color:rgb(1, 9, 9);
+  color:white;
+text-align: center;
+border: 1px solid rgb(53, 145, 171);
+transition:all 2s ease-in-out;
+}
+
+.home-pages:hover{
+    border-radius: 20px;
+    color: white;
+    background-color:rgb(10, 15, 62);
+}
+
+.hidden {
+    display: none ;
+}
+
+/* acesta este pentru button  vezi grija :)) */
+/*
+  https://developer.mozilla.org/en/docs/Web/CSS/box-shadow
+  box-shadow: [inset?] [top] [left] [blur] [size] [color];
+
+  Tips:
+    - We're setting all the blurs to 0 since we want a solid fill.
+    - Add the inset keyword so the box-shadow is on the inside of the element
+    - Animating the inset shadow on hover looks like the element is filling in from whatever side you specify ([top] and [left] accept negative values to become [bottom] and [right])
+    - Multiple shadows can be stacked
+    - If you're animating multiple shadows, be sure to keep the same number of shadows on hover/focus as non-hover/focus (even if you have to create a transparent shadow) so the animation is smooth. Otherwise, you'll get something choppy.
+*/
+
+
+.fill:hover,
+.fill:focus {
+    background-color: rgb(2, 2, 70);
+    
+
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+
+.pulse:hover, 
+.pulse:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em transparent;
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 var(--hover); }
+}
+
+
+.close:hover,
+.close:focus {
+  box-shadow: 
+    inset -3.5em 0 0 0 var(--hover),
+    inset 3.5em 0 0 0 var(--hover);  
+}
+
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+
+.up:hover,
+.up:focus {
+
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+
+.slide:hover,
+.slide:focus {
+  box-shadow: inset 6.5em 0 0 0 var(--hover);
+}
+
+
+.offset {  
+  box-shadow: 
+    0.3em 0.3em 0 0 var(--color),
+    inset 0.3em 0.3em 0 0 var(--color);
+  
+    offset:hover{
+    box-shadow: 
+      0 0 0 0 var(--hover),
+      inset 6em 3.5em 0 0 var(--hover);
+  }
+}
+
+
+
+@each $button, $color in $colors {
+  .#{$button} {
+    --color: #{$color};
+    --hover: #{adjust-hue($color, 45deg)};
+  }
+}
+
+button {  
+  color: var(--color);
+  transition: 0.25s;
+  &:hover,
+  &:focus { 
+    border-color: var(--hover);
+    color: #fff;
+  }
+}
+button:hover
+   { 
+    border-color: var(--hover);
+    color: rgb(43, 151, 115);
+  }
+button:focus { 
+    border-color: var(--hover);
+    color: rgb(245, 239, 239);
+}
+
+body {
+  color: #fff;
+  background: hsl(227, 10%, 10%);
+  font: 300 1em 'Fira Sans', sans-serif;
+  
+
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+}
+
+
+button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+}
+
+h1 { font-weight: 400; }
+
+code { 
+  color: #e4cb58;
+  font: inherit;
+}
+.modal-hidden{
+  color: white;
+  font-weight: 600px;
+  font-size: 35px;
+}
+/* 
+
+    
+    .home-page__titlu--paragraf__buttons__twitter {
+        margin: 0.75rem;
+     
+      
+    }
+    
+    .home-page__titlu--paragraf__buttons__instagram {
+     
+        margin: 0.75rem;
+        height: 300px;
+        top: 10%;
+    }
+    
+    .home-page__titlu--paragraf__buttons__facebook {
+      
+        margin: 0.75rem;
+        height: 40px;
+        text-align:right
+    }
+    
+    .home-page__titlu--paragraf__buttons__snapchat {
+      
+        margin: 0.75rem;
+        height: 40px;
+        text-align:left
+    }
+    
+    .home-page__titlu--paragraf__buttons__linkedin {
+        
+        margin: 0.75rem;
+        height: 10px;
+        text-align:left
+    }
+    
+    .home-page__titlu--paragraf__buttons__email {
+    
+        margin: 0.75rem;
+        height: 40px;
+        text-align:left
+    }
+    
+    .home-page__titlu--paragraf__buttons__github {
+   
+        margin: 0.75rem;
+        height: 40px;
+        text-align:left
+    }
+    
+    .home-page {
+        text-align: center;
+    }
+ 
+    
+    .home-page__titlu--paragraf__buttons1 {
+        color: rgb(254, 251, 251);
+        background-color: rgb(38, 143, 181);
+        height: 300px;
+        width: 450px;
+        font-size: 35px;
+        transition: all 1s linear;
+     
+        top:right;
+    }
+    
+    .home-page__titlu--paragraf__buttons1:hover {
+        font-size: 35px;
+        color: rgb(3, 0, 0);
+        background-color: rgb(244, 243, 248);
+    }
+    
+   
+    
+     .home-page__titlu--paragraf__buttons2 {
+        color: rgb(254, 251, 251);
+        background-color: rgb(39, 186, 142);
+        height: 300px;
+        width: 450px;
+        font-size: 35px;
+        transition: all 1s linear;
+      
+        top: 10%;
+    }
+    
+    .home-page__titlu--paragraf__buttons2:hover {
+        font-size: 35px;
+        color: rgb(3, 0, 0);
+        background-color: rgb(20, 15, 159);
+    }
+     
+     .home-page__titlu--paragraf__buttons3 {
+        color: rgb(254, 251, 251);
+        background-color: rgb(45, 35, 181);
+        height: 300px;
+        width: 450px;
+        font-size: 35px;
+        transition: all 1s linear;
+
+        top: 20px;
+    }
+    
+    .home-page__titlu--paragraf__buttons3:hover {
+        font-size: 35px;
+        color: rgb(3, 0, 0);
+        background-color: rgb(244, 243, 248);
+    }
+  
+    
+    .home-page__titlu--paragraf__buttons5 {
+        color: rgb(254, 251, 251);
+        background-color: rgb(9, 165, 185);
+        height: 300px;
+        width: 450px;
+        font-size: 35px;
+        transition: all 1s linear;
+        display: block;
+top: 300px;
+    }
+    
+    .home-page__titlu--paragraf__buttons5:hover {
+        font-size: 35px;
+        color: rgb(3, 0, 0);
+        background-color: rgb(244, 243, 248);
+    }
+
+    
+    .home-page__titlu--paragraf__buttons7 {
+        color: rgb(254, 251, 251);
+        background-color: rgb(171, 85, 208);
+        height: 300px;
+        width: 450px;
+        font-size: 35px;
+        transition: all 1s linear;
+        
+        top: 20px;
+    }
+    
+    .home-page__titlu--paragraf__buttons7:hover {
+        font-size: 35px;
+        color: rgb(3, 0, 0);
+        background-color: rgb(244, 243, 248);
+    }50px
+
+    .home-page__titlu--paragraf__buttons6 {
+        color: rgb(254, 251, 251);
+        background-color: rgb(59, 200, 160);
+        height: 300px;
+        width: 450px;
+        font-size: 35px;
+        transition: all 1s linear;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .home-page__titlu--paragraf__buttons6:hover {
+        font-size: 35px;
+        color: rgb(3, 0, 0);
+        background-color: rgb(244, 243, 248);
+    }
+    
+    .home-page__titlu {
+        font-size: 45px;
+    }
+    
+    */
+img{
+  border-radius: 50px;
+
+}
+    .copyright{
+        text-align:center;
+    
+    } 
