@@ -98,30 +98,13 @@ transition:all 2s ease-in-out;
     0.3em 0.3em 0 0 var(--color),
     inset 0.3em 0.3em 0 0 var(--color);
   
-    offset:hover{
-    box-shadow: 
-      0 0 0 0 var(--hover),
-      inset 6em 3.5em 0 0 var(--hover);
-  }
 }
 
-
-
-@each $button, $color in $colors {
-  .#{$button} {
-    --color: #{$color};
-    --hover: #{adjust-hue($color, 45deg)};
-  }
-}
 
 button {  
   color: var(--color);
   transition: 0.25s;
-  &:hover,
-  &:focus { 
-    border-color: var(--hover);
-    color: #fff;
-  }
+ 
 }
 button:hover
    { 
