@@ -1,9 +1,14 @@
+*{
+  margin: top 30px;
+  margin:0px;
+  padding:0px;
+}
 
-    body {
-        background-image:linear-gradient(rgb(227, 231, 252), rgb(162, 232, 211));
-    }
+.containe{
+margin: 70px;
 
 
+}
 nav{
     padding: 100px;
     margin: 0 auto;
@@ -28,17 +33,6 @@ transition:all 2s ease-in-out;
 }
 
 /* acesta este pentru button  vezi grija :)) */
-/*
-  https://developer.mozilla.org/en/docs/Web/CSS/box-shadow
-  box-shadow: [inset?] [top] [left] [blur] [size] [color];
-
-  Tips:
-    - We're setting all the blurs to 0 since we want a solid fill.
-    - Add the inset keyword so the box-shadow is on the inside of the element
-    - Animating the inset shadow on hover looks like the element is filling in from whatever side you specify ([top] and [left] accept negative values to become [bottom] and [right])
-    - Multiple shadows can be stacked
-    - If you're animating multiple shadows, be sure to keep the same number of shadows on hover/focus as non-hover/focus (even if you have to create a transparent shadow) so the animation is smooth. Otherwise, you'll get something choppy.
-*/
 
 
 .fill:hover,
@@ -118,7 +112,7 @@ button:focus {
 
 body {
   color: #fff;
-  background: hsl(227, 10%, 10%);
+  background: hsl(223, 4%, 65%);
   font: 300 1em 'Fira Sans', sans-serif;
   
 
@@ -126,8 +120,8 @@ body {
   align-content: center;
   align-items: center;
   text-align: center;
-  min-height: 100vh;
-  display: flex;
+ 
+
 }
 
 
@@ -136,11 +130,11 @@ button {
   border: 2px solid;
   font: inherit;
   line-height: 1;
-  margin: 0.5em;
+  
   padding: 1em 2em;
 }
 
-h1 { font-weight: 400; }
+
 
 code { 
   color: #e4cb58;
@@ -318,11 +312,93 @@ top: 300px;
     }
     
     */
-img{
-  border-radius: 50px;
 
-}
     .copyright{
         text-align:center;
     
     } 
+    @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+figure.container {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+
+
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+
+  color: #ffffff;
+  text-align: center;
+  background-color: #07090c;
+  font-size: 16px;
+  
+}
+figure.container * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+figure.container img {
+  opacity: 1;
+  width: 100%;
+  -webkit-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+}
+figure.container figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  -webkit-transform-origin: 50% -50%;
+  -ms-transform-origin: 50% -50%;
+  transform-origin: 50% -50%;
+  z-index: 1;
+  opacity: 0;
+
+}
+figure.container h3,
+figure.container p {
+  line-height: 1.5em;
+}
+figure.container h3 {
+  margin: 0;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+figure.container p {
+  font-size: 0.8em;
+  font-weight: 500;
+
+}
+figure.container .more {
+  border: 2px solid #ffffff;
+  padding: 0.5em 1em;
+  font-size: 0.8em;
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+}
+figure.container .more:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+figure.container:hover img,
+figure.container.hover img {
+  -webkit-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  opacity: 0;
+}
+figure.container:hover figcaption,
+figure.container.hover figcaption {
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
